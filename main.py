@@ -4,3 +4,4 @@ def lol(x):
 lol(2)
 lol(5)
 lol(6)
+lol(8)

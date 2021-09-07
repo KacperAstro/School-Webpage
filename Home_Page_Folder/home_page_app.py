@@ -7,4 +7,4 @@ home_page = Blueprint('home_page', __name__, url_prefix='/homepage',
 
 @home_page.route('/')
 def home_page_def():
-    return "LOL"
+    return render_template("Home_Page_HTML.html")

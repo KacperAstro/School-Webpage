@@ -1,8 +1,8 @@
 from flask import Flask, Blueprint, render_template
-from Home_Page_Folder.home_page_app import home_page
+from Main_Page_Folder.main_page_app import main_page
 
 app = Flask(__name__)
-app.register_blueprint(home_page)
+app.register_blueprint(main_page)
 
 
 if __name__ == "__main__":

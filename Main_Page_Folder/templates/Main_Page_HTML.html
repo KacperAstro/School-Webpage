@@ -4,10 +4,57 @@
 
 
 {% block head %}
-
+    <link rel="stylesheet" href="{{url_for('main_page.static', filename='styles/Main_Page_style.css')}}">
+    <!--Head-->
 {% endblock %}
 
 
 {% block body %}
-    <p class="test">whatever</p>
+    <!--Body-->
+    <div id="container">
+        <div class="navbar">
+            
+        </div>
+        <div class="parallax_effect">
+            
+        </div>
+        <div class="hours_of_mass">
+            <br>
+            Pożądek nabożeństw.
+            <br><br>
+            Niedziele i święta:
+            <br>
+            7.00, 8.30, 10.00, 12.00, 13.30, 16.00
+            <br><br>
+            Dni powszednie:
+            <br>
+            7.00, 8.00
+            <br><br>
+            Spowiedź święta:
+            <br>
+            Przed każdą mszą
+            <br><br>
+            I piątki miesiąca:
+            <br>
+            7.00, 8.00
+            <br><br>
+            W czwartki:
+            <br>
+            Msza święta o 18.00 za Wyższe Seminarium Duchowne.
+            <a href="" target="_blank" class="hours_of_mass"><br>Czytaj dalej</a>
+        </div>
+        <div class="article2">
+            
+            <a href="" target="_blank" class="article2_link"><br>Czytaj dalej</a>
+        </div>
+        <div class="article3">
+            
+            <a href="" target="_blank" class="article3_link"><br>Czytaj dalej</a>
+        </div>
+        <div class="footprint">
+            <br>
+            2021 &copy; Kacper Drulla i Norbert Depke
+            <br><br>
+        </div>
+    </div>
 {% endblock %}

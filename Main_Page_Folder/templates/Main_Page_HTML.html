@@ -10,13 +10,33 @@
 
 
 {% block body %}
-    <!--Body-->
+<header>
+    <!--Navbar-->
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+    <a href="#" class="logo">LOGO</a>
+    <ul>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+<section>
+    <!--Parallax Effect-->
+    <img src="{{url_for('main_page.static', filename='images/stars.png')}}" id="stars">
+    <img src="{{url_for('main_page.static', filename='images/moon.png')}}" id="moon">
+    <img src="{{url_for('main_page.static', filename='images/mountains_behind.png')}}" id="mountains_behind">
+    <h2 id="text">Moon Light</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="{{url_for('main_page.static', filename='images/mountains_front.png')}}" id="mountains_front">
+</section>
+
+<div class="sec" id="sec">
+    <!--Webpage Content-->
     <div id="container">
-        <div class="navbar">
-            
-        </div>
         <div class="parallax_effect">
-            
+            test
         </div>
         <div class="hours_of_mass">
             <br>
@@ -43,18 +63,57 @@
             Msza święta o 18.00 za Wyższe Seminarium Duchowne.
             <a href="" target="_blank" class="hours_of_mass"><br>Czytaj dalej</a>
         </div>
-        <div class="article2">
-            
+
+        <div class="article">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim autem distinctio explicabo voluptas. Ex ipsa unde minima, a obcaecati cumque corporis eveniet vel exercitationem ducimus. Debitis repudiandae sed id itaque quo molestias inventore ab repellat sunt iste, eos nihil nesciunt dolores qui velit obcaecati, eius maiores, provident iure. Odio voluptas facere ea est! Eos non accusamus odio perspiciatis repellat maxime itaque eaque inventore neque earum labore hic fugiat nobis nisi optio minus saepe, laudantium sequi iure voluptatibus. Commodi dicta impedit quia temporibus ut? Fuga, earum nam ab quis neque porro impedit quia perspiciatis perferendis quidem eveniet nihil excepturi deleniti quae?</p>
             <a href="" target="_blank" class="article2_link"><br>Czytaj dalej</a>
         </div>
-        <div class="article3">
-            
+
+        <div class="article">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat illo pariatur veritatis aut. Perferendis, quas accusamus doloremque iure minima sunt eius nostrum! Provident fugit incidunt suscipit porro deserunt! Voluptatum iure, magni commodi doloribus iusto ipsa odio cum rerum minus dignissimos tenetur cumque dolorem harum consequatur fugit quaerat nulla adipisci, quam reprehenderit ab nobis quisquam quidem nesciunt! Ipsa, nemo quod magnam veritatis reiciendis odit deleniti ab officiis pariatur impedit quae reprehenderit sed minima, vero sapiente esse iure dolores suscipit ad facilis ea dolorem. In laboriosam error impedit repellat accusamus suscipit corrupti doloribus reprehenderit. Repellendus aliquam voluptates nisi cumque, eos modi pariatur.</p>
             <a href="" target="_blank" class="article3_link"><br>Czytaj dalej</a>
         </div>
+
+        <div class="article">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat illo pariatur veritatis aut. Perferendis, quas accusamus doloremque iure minima sunt eius nostrum! Provident fugit incidunt suscipit porro deserunt! Voluptatum iure, magni commodi doloribus iusto ipsa odio cum rerum minus dignissimos tenetur cumque dolorem harum consequatur fugit quaerat nulla adipisci, quam reprehenderit ab nobis quisquam quidem nesciunt! Ipsa, nemo quod magnam veritatis reiciendis odit deleniti ab officiis pariatur impedit quae reprehenderit sed minima, vero sapiente esse iure dolores suscipit ad facilis ea dolorem. In laboriosam error impedit repellat accusamus suscipit corrupti doloribus reprehenderit. Repellendus aliquam voluptates nisi cumque, eos modi pariatur.</p>
+            <a href="" target="_blank" class="article3_link"><br>Czytaj dalej</a>
+        </div>
+
+        <div class="article">  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat illo pariatur veritatis aut. Perferendis, quas accusamus doloremque iure minima sunt eius nostrum! Provident fugit incidunt suscipit porro deserunt! Voluptatum iure, magni commodi doloribus iusto ipsa odio cum rerum minus dignissimos tenetur cumque dolorem harum consequatur fugit quaerat nulla adipisci, quam reprehenderit ab nobis quisquam quidem nesciunt! Ipsa, nemo quod magnam veritatis reiciendis odit deleniti ab officiis pariatur impedit quae reprehenderit sed minima, vero sapiente esse iure dolores suscipit ad facilis ea dolorem. In laboriosam error impedit repellat accusamus suscipit corrupti doloribus reprehenderit. Repellendus aliquam voluptates nisi cumque, eos modi pariatur.</p>
+            <a href="" target="_blank" class="article3_link"><br>Czytaj dalej</a>
+        </div>
+
         <div class="footprint">
             <br>
             2021 &copy; Kacper Drulla i Norbert Depke
             <br><br>
         </div>
     </div>
+</div>
+
+<script>
+    // Parallax Effect code
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let mountains_front = document.getElementById('mountains_front');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 2 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+    })
+</script>
+
+
 {% endblock %}
